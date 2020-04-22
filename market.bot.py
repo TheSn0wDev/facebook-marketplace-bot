@@ -12,7 +12,7 @@ class MarketBot(Client):
 
         if author_id != self.uid:
 
-            if (message_object.text == "Cet article est-il toujours disponible ?") or (message_object.text == "Cet article m’intéresse.") or (message_object.text == "Is this still available?") or (message_object.text == "Est-ce toujours disponible ?"):
+            if (message_object.text == "Cet article est-il toujours disponible ?") or (message_object.text == "Cet article m’intéresse.") or (message_object.text == "Cet article est-il disponible ?") or (message_object.text == "Is this still available?") or (message_object.text == "Est-ce toujours disponible ?") or (message_object.text == "Isto está disponível?") or (message_object.text == "Hola, ¿sigue disponible?") or (message_object.text == "È ancora disponibile?"):
                 sleep(random.randrange(5,15))
                 self.markAsDelivered(thread_id, message_object.uid)
                 self.markAsRead(thread_id)

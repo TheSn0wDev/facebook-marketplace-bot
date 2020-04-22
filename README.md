@@ -6,23 +6,19 @@ A simple Python-encoded bot to automatically reply to messages from Facebook Mar
 
 1 - [Download Python](https://www.python.org/downloads/) (if you don't have it)
 
-2 - Install the requirements
-```bash
-pip3 install -r requirements.txt
-```
-
-3 - Run the setup script
+2 - Run the setup script
 ```bash
 python3 setup.py
 ```
 
-4 - Edit config.py with your informations
+3 - Edit config.py with your informations
 ```python
 email = "youremailhere"
 password = "yourpasswordhere"
+phone_number = "01 02 03 04 05"
 ```
 
-5 - Run the script:
+4 - Run the script:
 ```bash
 python3 market.bot.py
 ```

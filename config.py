@@ -74,9 +74,9 @@ En 64go +45€
 
 deliver_message = """
 LE MAGASIN LIVRE UNIQUEMENT DES TELEPHONES NEUFS !
-Les prix des téléphones seront légèrement plus chèrs car ils sont comme neuf. Le paiement se fera en espèce uniquement
+Les prix des téléphones seront légèrement plus chèrs car ils sont comme neuf. Le paiement se fera en espèce ou CB uniquement.
 
-Pour prévoir une livraison, veuillez me contacter au {PHONE_NUMBER} et préciser votre numéro de téléphone valide, adresse complète et une carte d'identité.
+Pour prévoir une livraison, veuillez me contacter par SMS au {PHONE_NUMBER} et préciser votre numéro de téléphone valide, adresse complète et une carte d'identité.
 """.format(PHONE_NUMBER=phone_number)
 
 status_phone_message = """

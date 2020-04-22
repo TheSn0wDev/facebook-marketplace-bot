@@ -6,7 +6,6 @@ A simple Python-encoded bot to automatically reply to messages from Facebook Mar
 
 1 - [Download Python](https://www.python.org/downloads/) (if you don't have it)
 
-
 2 - Run the setup script
 ```bash
 python3 setup.py

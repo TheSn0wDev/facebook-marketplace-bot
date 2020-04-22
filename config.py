@@ -8,9 +8,9 @@
 ##############################
 
 # Enter your email Facebook account
-email = "youremailhere"
+email = "email.test@exemple.com"
 # Enter your password Facebook account
-password = "yourpasswordhere"
+password = "AwesomePass"
 # Enter your phone number
 phone_number = "01 02 03 04 05"
 
@@ -33,6 +33,8 @@ uniquement avec mon code : ROUGE75
 
 ( comme neuf un peu plus cher )
 A partir de :
+
+Voilà les stocks actuellement vous les mettez ça dans vos liste vous remplacer juste la partie des stocks ou il y a les prix des téléphones vous mettez ça à la place j’ai rajouté les nouvelles arrivages et enlever l’es rupture copier coller ça 
 
 iPhone 5/5c 16go: 59€
 iPhone 6S 64go : 99€

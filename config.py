@@ -11,6 +11,8 @@
 email = "youremailhere"
 # Enter your password Facebook account
 password = "yourpasswordhere"
+# Enter your phone number
+phone_number = "01 02 03 04 05"
 
 
 default_message = """
@@ -36,16 +38,23 @@ iPhone 5/5c 16go: 59€
 iPhone 6S 64go : 99€
 iPhone 6s Plus 32/64go : 149€
 iPhone 7 32/128go : 149€
+iPhone 8 64go : 229€
 IPhone 7 Plus 32go : 229
 iPhone X 64go : 359€
 iPhone XS Max 64go : 579€
 
+
 Samsung galaxy s5 16go : 79€
+Samsung galaxy s7 32go :  139€
+Samsung galaxy s7 edge 32go : 159€
+Samsung galaxy s8 64go : 179€
+Samsung galaxy s9 64go : 229€
 Samsung galaxy s10e 128go : 379€
 Samsung galaxy s10 128go : 419€
 Samsung galaxy s10plus 128go : 499€
 Samsung Note 10 256go : 499€
 Samsung Note 10 plus 256go : 549€
+
 
 iPad 2 16go : 79€
 iPad 3 16go : 109€
@@ -62,41 +71,12 @@ En 64go +45€
 """
 
 deliver_message = """
-Prix etat comme neuf en magasin ou pour livraison :
+LE MAGASIN LIVRE UNIQUEMENT DES TELEPHONES NEUFS !
+Les prix des téléphones seront légèrement plus chèrs car ils sont comme neuf. Le paiement se fera en espèce ou CB uniquement.
 
-iPhone :
-iPhone 5s 16gb : 85€
-iPhone 6 16gb : 129€
-iPhone 6 64g : 139€
-iPhone 6s 16gb :  150€
-iPhone 6s 32gb: 160€
-iPhone 6s 64g : 170€
-iPhone 6 Plus 16g  150€
-iPhone 6 Plus 64g : 160€
-iPhone 6s Plus 16g: 189€
-iPhone 6s Plus 64g: 209€
-iPhone 7 32gb : 199€
-iPhone 7 128g : 229€
-iPhone 7 Plus 32gb : 279€
-iPhone 8 64gb : 289€
-iPhone 8 plus 64gb : 379€
-iPhone X 64gb : 470€
-iPhone XR 64gb : 480€
-iPhone XS 64go : 550€
-iPhone XS Max 64go : 619€
+Pour prévoir une livraison, veuillez me contacter par SMS au {PHONE_NUMBER} et préciser votre numéro de téléphone valide, adresse complète et une carte d'identité.
+""".format(PHONE_NUMBER=phone_number)
 
-Samsung :
-Samsung s7 Edge 32gb : 199€
-Samsung s8 64gb : 249€
-Samsung s8 plus 64go : 280€
-Samsung s9 64gb : 299€
-Samsung s10e 128gb : 410€
-Samsung s10 128gb : 480€
-
-Les frais de livraisons ne sont pas inclus dans les prix ci-dessus.
-Prix des livraisons: 
-Dans le secteur de Paris: livraison gratuite
-Périphérie de Paris: 10€ de plus
-
-Pour la livraison j’ai besoin d’un numéro de téléphone, l’adresse complète et votre carte d’identité. Paiement en espèce uniquement
+status_phone_message = """
+Tous nos téléphones sont commes neufs. Les prix affichés sont ceux des téléphones les plus abîmés. En revanche, nous avons des téléphone d'occasions, comme neufs, sans traces d'usures. Les prix pour ces derniers sont bien entendu plus élevé.
 """

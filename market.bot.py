@@ -12,14 +12,35 @@ class MarketBot(Client):
 
         if author_id != self.uid:
 
-            if message_object.text == "Cet article est-il toujours disponible ?":
+            if (message_object.text == "Cet article est-il toujours disponible ?") or (message_object.text == "Cet article m’intéresse.") or (message_object.text == "Is this still available?") or (message_object.text == "Est-ce toujours disponible ?"):
+                sleep(random.randrange(5,15))
+                self.markAsDelivered(thread_id, message_object.uid)
+                self.markAsRead(thread_id)
+                self.setTypingStatus(TypingStatus.TYPING, thread_id=thread_id, thread_type=thread_type)
                 sleep(random.randrange(10,25))
                 self.send(Message(text=default_message), thread_id=thread_id, thread_type=thread_type)
 
-
             if message_object.text.find('livr') >= 0:
+                sleep(random.randrange(5,15))
+                self.markAsDelivered(thread_id, message_object.uid)
+                self.markAsRead(thread_id)
+                self.setTypingStatus(TypingStatus.TYPING, thread_id=thread_id, thread_type=thread_type)
                 sleep(random.randrange(10,25))
                 self.send(Message(text=deliver_message), thread_id=thread_id, thread_type=thread_type)
+
+            if (message_object.text.find('etat') >= 0) or (message_object.text.find('état') >= 0):
+                sleep(random.randrange(5,15))
+                self.markAsDelivered(thread_id, message_object.uid)
+                self.markAsRead(thread_id)
+                self.setTypingStatus(TypingStatus.TYPING, thread_id=thread_id, thread_type=thread_type)
+                sleep(random.randrange(10,20))
+                self.send(Message(text=status_phone_message), thread_id=thread_id, thread_type=thread_type)
+
+            if message_object.text.lower() == "ok":
+                sleep(random.randrange(5,15))
+                self.markAsDelivered(thread_id, message_object.uid)
+                self.markAsRead(thread_id)
+                self.reactToMessage(message_object.uid, MessageReaction.YES)
 
 
 client = MarketBot(email, password)

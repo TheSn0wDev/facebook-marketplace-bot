@@ -1,14 +1,7 @@
 1 - Install Python -> https://www.python.org/downloads/
 2 - Open a Terminal (Mac/linux) or CMD (Windows)
-3 - Run this command: 
-        pip3 install -r requirements.txt
-
-    If this command not work try:
-        pip install -r requirements.txt
-
-4 - Run the setup script: 
+3 - Run the setup script: 
         python3 setup.py
-
-5 - Edit config.py with your informations
-6 - Run the script:
+4 - Edit config.py with your informations
+5 - Run the bot:
         python3 market.bot.py

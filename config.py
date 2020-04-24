@@ -82,3 +82,7 @@ Pour prévoir une livraison, veuillez me contacter par SMS au {PHONE_NUMBER} et 
 status_phone_message = """
 Tous nos téléphones sont commes neufs. Les prix affichés sont ceux des téléphones les plus abîmés. En revanche, nous avons des téléphone d'occasions, comme neufs, sans traces d'usures. Les prix pour ces derniers sont bien entendu plus élevé.
 """
+
+shop_adress_message = """
+Le magasin se situe au 154 boulevard Berthier 75017, Métro 3: Porte de Champerret, RER C Pereire
+"""

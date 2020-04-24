@@ -6,13 +6,12 @@ from config import *
 from time import sleep
 import random, re
 
-
 class MarketBot(Client):
     def onMessage(self, author_id, message_object, thread_id, thread_type, **kwargs):
 
         if author_id != self.uid:
 
-            if (message_object.text == "Cet article est-il toujours disponible ?") or (message_object.text == "Cet article m’intéresse.") or (message_object.text == "Cet article est-il disponible ?") or (message_object.text == "Is this still available?") or (message_object.text == "Est-ce toujours disponible ?") or (message_object.text == "Isto está disponível?") or (message_object.text == "Hola, ¿sigue disponible?") or (message_object.text == "È ancora disponibile?"):
+            if (message_object.text == "Cet article est-il toujours disponible ?") or (message_object.text == "Cet article m’intéresse.") or (message_object.text == "Cet article est-il disponible ?") or (message_object.text == "Is this still available?") or (message_object.text == "Est-ce toujours disponible ?") or (message_object.text == "Isto está disponível?") or (message_object.text == "Hola, ¿sigue disponible?") or (message_object.text == "È ancora disponibile?") or (message_object.text == "Bu ürün hâlâ satılık mı?") or (message_object.text == "¿Sigue disponible?"):
                 sleep(random.randrange(5,15))
                 self.markAsDelivered(thread_id, message_object.uid)
                 self.markAsRead(thread_id)
@@ -36,12 +35,19 @@ class MarketBot(Client):
                 sleep(random.randrange(10,20))
                 self.send(Message(text=status_phone_message), thread_id=thread_id, thread_type=thread_type)
 
+            if (message_object.text.find('adresse') >= 0):
+                sleep(random.randrange(5,15))
+                self.markAsDelivered(thread_id, message_object.uid)
+                self.markAsRead(thread_id)
+                self.setTypingStatus(TypingStatus.TYPING, thread_id=thread_id, thread_type=thread_type)
+                sleep(random.randrange(10,20))
+                self.send(Message(text=shop_adress_message), thread_id=thread_id, thread_type=thread_type)
+
             if message_object.text.lower() == "ok":
                 sleep(random.randrange(5,15))
                 self.markAsDelivered(thread_id, message_object.uid)
                 self.markAsRead(thread_id)
                 self.reactToMessage(message_object.uid, MessageReaction.YES)
-
 
 client = MarketBot(email, password)
 client.listen()

@@ -19,7 +19,7 @@ I programmed this bot in Python. This was the first time that I use this languag
 git clone https://github.com/Sn00ww/facebook-marketplace-bot
 ```
 
-## Usage
+## Configuration
 
 Edit config.py with your informations
 ```python
@@ -27,6 +27,8 @@ email = "youremailhere"
 password = "yourpasswordhere"
 phone_number = "01 02 03 04 05"
 ```
+
+## Usage
 
 ```sh
 python3 setup.py
